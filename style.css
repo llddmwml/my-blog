@@ -1,0 +1,167 @@
+:root {
+  --main-font: 'Noto Serif SC';
+  --text-color: #333;
+  --bg-color: #fff;
+  --accent: #007bff;
+}
+
+body {
+  font-family: var(--main-font);
+  line-height: 1.8;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: #f5f5f5;
+}
+
+.cover {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  margin-top: 1em;
+  border-radius: 12px;
+}
+
+.subtitle {
+  color: #666;
+  font-style: italic;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2em;
+  padding: 2em;
+  max-width: 960px;
+  margin: auto;
+}
+
+article {
+  font-size: 1.1em;
+}
+
+aside {
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  color: #888;
+  background-color: #fafafa;
+}
+
+/* 响应式设计 */
+@media (max-width:768px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 0.5em;
+  }
+
+  aside {
+    margin-top: 1em;
+  }
+
+  .cover {
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  main {
+    padding: 0.2em 0.2em;
+  }
+
+  aside {
+    background: #f9f9f9;
+    padding: 0em;
+    border-radius: 10px;
+  }
+
+  article {
+    font-size: 0.8em;
+  }
+}
+
+nav {
+  background-color: #333;
+  padding: 1em;
+}
+
+.nav-container {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  gap: 2em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: blod;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.grad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em;
+  padding: 2em;
+}
+
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post-card:hover {
+  transform: scale(1.02);
+}
+
+.post-card h3 {
+  margin: 1em;
+}
+
+.post-card p {
+  margin: 0 1em 1em;
+  color: #555;
+}
+
+.comments {
+  margin-top: 3em;
+  padding: 1em;
+  background: #9d3e3e;
+  border-radius: 10px;
+}
+
+.comment {
+  margin-bottom: 1em;
+  border-bottom: 1px dashed #0a5a15;
+  padding-bottom: 0.5em;
+  font-size: 60%;
+}
